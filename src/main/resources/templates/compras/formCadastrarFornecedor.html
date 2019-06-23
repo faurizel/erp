@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ERP
+		
+	</title>
+
+<meta charset="utf-8">
+
+<style type="text/css">
+	
+
+
+}
+	
+
+</style>
+	<link rel="stylesheet" type="text/css" href="css2/style.css"> 
+    <link rel="stylesheet" type="text/css" href="css2/style2.css">
+    <link rel="stylesheet" type="text/css" href="css2/style3.css">
+     <link rel="stylesheet" type="text/css" href="css2/style4.css">
+
+</head>
+<body>
+
+	  <div id="area-cabecalho">
+
+        <div id="area-logo">
+           <!--<h2 style="color: white; font-size: 3em;">E R P</h2>-->
+            <img src="imagens/logojk.png" class="logo">
+      
+	      </div>
+	 
+
+          
+	       <nav style="background-color: #4d88ff;padding: 10px;">
+
+
+               <div class="dropdown">
+				   <a href="/cadastrarfornecedor" class="dropbtn">Cadastrar Fornecedor</a>
+				    <div class="dropdown-content">
+				      <a href="/pagecompras">Compras</a>
+				   </div>    
+				</div>		       
+<!--  
+				 <div class="dropdown" >
+				  <a id="recebi" class="dropbtn">Recebimento</a>
+				    <div class="dropdown-content">
+				      <a href="">Cotações</a>
+				   </div>    
+
+				</div>		   
+				 <div class="dropdown" >
+				  <a class="dropbtn">Estoque</a>
+				    <div class="dropdown-content">
+				      <a href="">Cotações</a>
+				   </div>    
+				</div>		   
+				 <div class="dropdown" >
+				  <a class="dropbtn">Vendas</a>
+				    <div class="dropdown-content">
+				      <a href="">Cotações</a>
+				   </div>    
+				</div>
+-->
+           </nav>
+
+       </div>
+    <form class="container" method="POST">    
+        <table>
+
+     <div style="float: left;" id="q1">
+      <div style="float: left;">
+        <tr>
+          <th><label >CNPJ</label></th>
+          <th><label >Razão Social</label></th>
+          <th><label >DDD</label></th>
+          <th><label >Telefone</label></th>
+          
+        </tr>
+        <tr>
+          <td>
+            <input  type="text" name="cnpj" size="35"  placeholder="CNPJ">
+          </td>
+          <td>
+            <input  type="text" name="razaoSocial" size="30"  placeholder="Razão Social">
+          </td>
+          <td>
+            <input  type="text" name="ddd" size="2"  placeholder="DDD">
+          </td>
+          <td>
+            <input  type="text" name="telefone" size="20"  placeholder="Telefone">
+          </td>
+        </tr>
+        <tr>
+          <th><label >E-mail</label></th>
+          <th><label >CEP</label></th>
+          <th><label >Número</label></th>
+             <th><label >Endereço</label></th>
+        </tr>
+                <tr>
+          <td>
+            <input  type="text" name="email" size="35"  placeholder="E-mail">
+          </td>
+          <td>
+            <input  type="text" name="cep" size="15"  placeholder="CEP">
+          </td>
+         
+          <td>
+            <input  type="text" name="numero" size="5"  placeholder="Número">
+          </td>
+          
+          <td>
+            <input  type="text" name="endereco" size="5"  placeholder="Endereco">
+          </td>
+        </tr>
+
+        <tr>
+          <th><label >Complemento</label></th>
+          <th><label >Cidade</label></th>
+          <th><label >Bairro</label></th>
+          <th><label >UF</label></th></th>
+          <th><label >Estado</label></th></th>
+          </tr>
+        <tr>
+          <td>
+            <input  type="text" name="complemento" size="35"  placeholder="Complemento">
+          </td>
+          <td>
+            <input  type="text" name="cidade" size="18"  placeholder="Cidade">
+          </td>
+          <td>
+            <input  type="text" name="bairro" size="20"  placeholder="Bairro">
+          </td>
+          <td>
+            <input  type="text" name="uf" size="4"  placeholder="UF">
+          </td>
+          
+          <td>
+            <input  type="text" name="estado" size="7"  placeholder="Estado">
+          </td>
+        </tr>
+
+        
+      </table>
+ 
+                        <br><br>
+   <button type="submit" id="butClear" style="margin-left: 2px;">Cadastrar</button>
+
+   <button id="butClear" style="margin-left: 2px;" >Limpar</button>     
+  </form>
+  
+</body>
+</html>

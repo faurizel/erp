@@ -1,0 +1,34 @@
+
+.data{
+
+  float:right; margin: 2px 2px 2px 2px;;
+  background-color:#4d88ff; 
+  padding: 5px;
+  color: white ;
+
+}
+
+
+.formulari{
+
+}
+
+input {
+  margin: 2px 2px 2px 2px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+}
+
+.conteinner{
+background-color: #4d88ff;
+padding-left: 90px;
+
+}
+label{
+
+	color: white;
+	padding-right: 2px;
+}

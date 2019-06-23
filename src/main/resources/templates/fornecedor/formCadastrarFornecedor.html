@@ -1,0 +1,43 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Cadastro Fornecedor</title>
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+<!--Import materialize.css-->
+<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"media="screen,projection" />
+
+<!--Let browser know website is optimized for mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+	<h1>Cadastro de Fornecedor</h1>
+	<form class="container" method="POST">
+			<div class="input-field col s6">
+				Cnpj <input type="text" name="cnpj">
+			</div>
+			
+			<div class="input-field col s3">
+			Razão Social: <input type="text" name="razaoSocial">
+			</div>
+			<div class="input-field col s3">
+			Telefone: <input type="text" name="telefone">
+			</div>
+			<div class="input-field col s3">
+			ddd: <input type="text"	name="ddd">
+			</div>
+			<div class="input-field col s3">
+			 E-mailL: <input type="text" name="email"></div>
+			<div class="input-field col s3">Cep: <input type="text" name="cep"></div>
+			<div class="input-field col s3"> Endereço: <input type="text" name="endereco"></div> 
+			<div class="input-field col s3"> Número: <input	type="text" name="numero"></div>
+			<div class="input-field col s3">Complemento: <input type="text" name="complemento"></div>
+			<div class="input-field col s3"> Bairro: <input type="text" name="bairro"></div> 
+			<div class="input-field col s3">Cidade: <input type="text" name="cidade"></div>
+			<div class="input-field col s3"> Estado:<input	type="text" name="estado"></div> 
+			<button type="submit">Salvar</button>
+	</form>
+	<!--JavaScript at end of body for optimized loading-->
+	<script type="text/javascript" src="materializ/js/materialize.min.js"></script>
+</body>
+</html>

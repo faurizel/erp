@@ -1,4 +1,4 @@
-package etec.sp.gov.br.erp.entity;
+package br.gov.sp.etec.erp.entity;
 
 import java.io.Serializable;
 
@@ -29,22 +29,6 @@ public class Fornecedor implements Serializable {
 	private String bairro;
 	private String cidade;
 	private String estado;
-
-	/*ublic Fornecedor(String cnpj, String razaoSocial, String telefone, String ddd, String email, String cep,
-			String endereco, String numero, String complemento, String bairro, String cidade, String estado) {
-		this.cnpj = cnpj;
-		this.razaoSocial = razaoSocial;
-		this.telefone = telefone;
-		this.ddd = ddd;
-		this.email = email;
-		this.cep = cep;
-		this.endereco = endereco;
-		this.numero = numero;
-		this.complemento = complemento;
-		this.bairro = bairro;
-		this.cidade = cidade;
-		this.estado =  estado;
-	}*/
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

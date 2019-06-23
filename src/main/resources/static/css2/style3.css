@@ -1,0 +1,103 @@
+
+ .search-container {
+      float: left;
+          }
+
+input[id=busca] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+
+}
+
+.search-container button  {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  width: 90px;
+}
+#Butsubmit{
+       float: right;
+       padding: 6px 10px;
+       background: #ddd;
+       font-size: 17px;
+      border: none;
+      cursor: pointer;
+      width: 90px;
+}
+#Butsubmit2{
+	   float: right;
+       padding: 6px 10px;
+       margin-top: 8px;
+       background: ;
+       font-size: 17px;
+      border: none;
+      cursor: pointer;
+      width: 90px;
+
+}
+#Butsubmit3{
+
+ 
+      background: #ddd;
+      font-size: 17px;
+      border: none;
+      cursor: pointer;
+      width: 200px;
+}
+    
+#Butsubmit2:hover{
+background-color: #87CEEB;
+}
+#Butsubmit:hover{
+	background-color: #87CEEB;
+}
+#Butsubmit3:hover{
+  background-color: #87CEEB;
+}
+#ReqP{
+  float: right;
+  }
+
+#butClear,#ReqP{
+  color: white;
+  padding: center;
+  border: none;
+  cursor: pointer;
+   border-radius: 2px;
+   width: 180px;
+   height: 30px;
+   font-size:1vw;
+   background-color:#4d88ff;
+
+}
+#butClear:hover{
+  background-color: #87CEEB;
+}
+
+
+.search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }

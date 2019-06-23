@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+#tableC {
+	border: 2px 2px 2px 2px;
+	padding: none;
+	float: left;
+}
+
+#navtab1 {
+	padding: 10px;
+	background-color: #4d88ff;
+	color: white;
+}
+</style>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>ERP</title>
+<link rel="stylesheet" href="css2/style.css">
+<link rel="stylesheet" type="text/css" href="css2/style2.css">
+<link rel="stylesheet" type="text/css" href="css2/style3.css">
+<link rel="stylesheet" type="text/css" href="css2/style4.css">
+
+
+
+<style>
+
+#mousehover{
+    cursor: pointer;
+    
+}
+#mousehover:hover{
+background-color:white;
+ border: 1px solid #008CBA;
+ color: blue;
+ }
+
+</style>
+
+</head>
+<body style="margin: 0">
+
+	<div id="area-cabecalho">
+
+		<div id="area-logo">
+			<!--<h2 style="color: white; font-size: 3em;">E R P</h2>-->
+			<img src="imagens/logojk.png" class="logo">
+                
+		</div>
+
+
+
+		<nav style="background-color: #4d88ff; padding: 12px;">
+			<div class="dropdown">
+				<a href="pagecompras" class="dropbtn">Compras</a>
+				<div class="dropdown-content">
+					<a href="cadastrarfornecedor">Cadastrar Fornecedor</a>
+				</div>
+			</div>
+       <!--
+			<div class="dropdown">
+				<a id="recebi" class="dropbtn">Recebimento</a>
+				<div class="dropdown-content">
+					<a href="">Cotações</a>
+				</div>
+
+			</div>
+			   <div class="dropdown">
+				  <a class="dropbtn">Estoque</a>
+				<div class="dropdown-content">
+					<a href="">Cotações</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<a class="dropbtn">Vendas</a>
+				<div class="dropdown-content">
+					<a href="">Cotações</a>
+				</div>
+			</div>
+    -->
+
+		</nav>
+
+	</div>
+	<br>
+	<!-- <div id="area-principal">
+        <div id="area-de-postagem"> -->
+
+	<nav id="navtab1">
+		Dados do Fornecedor    <input style="" type="date" placeholder=""
+			name="dataRequisicao" class="data">
+	</nav>
+
+	<form action="/fornecedores">
+
+		<table>
+			<tr>
+				<th>CNPJ</th>
+				<th>ID</th>
+				<th>Opções</th>
+			</tr>
+
+			<tr>
+				<td><input style="" type="" placeholder="Digite Aqui"
+					name="cnpj" size="40"></td>
+
+				<td><input type="text" id="tableC" placeholder="Digite Aqui"
+					name="id" size="40"></td>
+
+
+
+				<td><button style="float: right; margin: 2px 2px 2px 2px;"
+						type="submit" id="butClear">Selecionar</button>
+					       <button style="float: right; margin: 2px 2px 2px 2px;"
+						 id="butClear" type="reset" >Limpar</button>
+					
+
+			</tr>
+
+
+
+
+		</table>
+
+	</form>
+	
+<form action="/fornecedores">
+
+  
+	
+	       <div class="dropdown" id="mousehover">
+				<tr>Fornecedores</tr>
+			 <div class="dropdown-content">
+			   <tr th:each="f : ${fornecedores}">	   		
+				<a href="" ><span th:text="'Razão Social: '+${f.razaoSocial}+ '|| CNPJ: ' + ${f.cnpj}"> </span> </a>
+			   <tr>
+			</div>
+		</div>
+</form>
+
+         					
+			
+				
+		  
+	<br>
+	<br>
+	<br>
+
+
+	<nav id="navtab1">Buscar Produtos</nav>
+
+	<form action="/produtos">
+
+
+		<table>
+
+			<tr>
+				<th>Código produto</th>
+				<th>Nome</th>
+				<th>Quantidade</th>
+				<th>Valor unitário</th>
+
+			</tr>
+
+			<tr>
+				<td><input type="text" name="" size="20"
+					placeholder="Digite o Código"></td>
+				<td><input type="text" name="descricao" size="40"
+					placeholder="Digite o Nome"></td>
+				<td><input type="text" name="" size="24"
+					placeholder="Digite a Quantidade"></td>
+				<td><input type="text" name="" size="24" placeholder="Valor"></td>
+
+
+			</tr>
+
+		</table>
+
+
+		<br>
+		<button style="float: right; margin: 2px 2px 2px 2px;" type="submit"
+			id="butClear">Solicitar</button>
+		<button style="float: right; margin: 2px 2px 2px 2px;" type="submit"
+			id="butClear">Buscar</button>
+		<button style="float: right; margin: 2px 2px 2px 2px;"
+			id="butClear"  type="reset">Limpar</button>
+
+		<br>
+		<br>
+
+	</form>
+
+	<br>
+	<br>
+
+	<nav id="navtab1">Lista Produtos</nav>
+
+
+<form action="/produtos">
+
+	<table id="customTable">
+
+		<tr>
+			<th>Descricao</th>
+			<th>Valor</th>
+			<th>Quantidade</th>
+			<th></th>
+		</tr>
+		<tr th:each="p : ${produtos}">
+			<td><span th:text="${p.descricao}"></td>
+			<td><span th:text="${p.valor}"></td>
+			<td><span th:text="${p.quantidade}"></td>
+			 
+			 <td><button style="float: right; margin: 2px 2px 2px 2px;"
+			type="submit" id="butClear">Por cotação</button></td>
+			
+		</tr>
+	
+	</table>
+	<button style="float: right; margin: 2px 2px 2px 2px;"
+			type="submit" id="butClear">Finalizar Compra</button>
+</form>
+
+	<br>
+	<br>
+	<div id="rodape">
+		<h6>Todos os direitos reservados</h6>
+	</div>
+
+
+
+
+</body>
+</html>
