@@ -1,6 +1,7 @@
 package br.gov.sp.etec.erp.entity;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -17,10 +18,11 @@ public class EntradaNF implements Serializable {
 	private static final long serialVersionUID = -3952053683870310569L;
 
 	private Long id_entrada;
+	private Long id_codigo_produto;
 	private String nota_fiscal;
-	private String data_entrada;
-	private String ordem_compra;
-	private String valor_total;
+	private Date data_entrada;
+	private int ordem_compra;
+	private double valor_total;
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -39,26 +41,36 @@ public class EntradaNF implements Serializable {
 		this.nota_fiscal = nota_fiscal;
 	}
 	@Column(name = "data_entrada", nullable = false)
-	public String getData_entrada() {
+	public Date getData_entrada() {
 		return data_entrada;
 	}
-	public void setData_entrada(String data_entrada) {
+	public void setData_entrada(Date data_entrada) {
 		this.data_entrada = data_entrada;
 	}
 	@Column(name = "ordem_compra", nullable = false)
-	public String getOrdem_compra() {
+	public int getOrdem_compra() {
 		return ordem_compra;
 	}
-	public void setOrdem_compra(String ordem_compra) {
+	public void setOrdem_compra(int ordem_compra) {
 		this.ordem_compra = ordem_compra;
 	}
 	@Column(name = "valor_total", nullable = false)
-	public String getValor_total() {
+	public double getValor_total() {
 		return valor_total;
 	}
-	public void setValor_total(String valor_total) {
+	public void setValor_total(double valor_total) {
 		this.valor_total = valor_total;
 	}
+	
+	@Column(name = "id_codigo_produto", nullable = false)
+	public Long getId_codigo_produto() {
+		return id_codigo_produto;
+	}
+	public void setId_codigo_produto(Long id_codigo_produto) {
+		this.id_codigo_produto = id_codigo_produto;
+	}
+	
+	
 	@Override
 	public String toString() {
 		return "Entrada_nf [id_entrada=" + id_entrada + ", nota_fiscal=" + nota_fiscal + ", data_entrada="

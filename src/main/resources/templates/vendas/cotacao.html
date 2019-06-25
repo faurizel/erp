@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>ERP</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="materialize/css/style.css"> 
+    
+		<style type="text/css">
+
+
+		textarea{
+			margin-left: 60px;
+
+		}
+
+		#txtBusca{
+  float:left;
+  background-color:transparent;
+  padding-left:5px; 
+  font-size:18px;
+  border:none;
+  height:32px;
+  width:226px;
+}
+ 
+#btnBusca{
+  float:left;
+  cursor:pointer;
+}
+ 
+
+ 
+#divBusca{
+  border:solid 10px rgba(47, 79, 79, 0.8);
+  border-radius:10px;
+  height:37px;
+  width:400px;
+  margin-left: 60px;
+}
+
+		#divBusca{
+  background-color:white;
+  border:solid 2px;
+  border-radius:100px;
+  width:500px;
+}
+ 
+#txtBusca{
+  float:left;
+  background-color:transparent;
+  padding-left:5px;
+  font-style:italic;
+  font-size:18px;
+  border:none;
+  height:32px;
+  width:495px;
+}
+
+			.myButton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #9acc85;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #9acc85;
+	box-shadow:inset 0px 1px 0px 0px #9acc85;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #74ad5a), color-stop(1, #68a54b));
+	background:-moz-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+	background:-webkit-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+	background:-o-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+	background:-ms-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+	background:linear-gradient(to bottom, #74ad5a 5%, #68a54b 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#74ad5a', endColorstr='#68a54b',GradientType=0);
+	background-color:#74ad5a;
+	border:1px solid #3b6e22;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:14px;
+
+	font-weight:bold;
+	padding:8px 17px;
+	text-decoration:none;
+	margin-left: 510px;
+	margin-top: -200px;
+
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #68a54b), color-stop(1, #74ad5a));
+	background:-moz-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+	background:-webkit-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+	background:-o-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+	background:-ms-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+	background:linear-gradient(to bottom, #68a54b 5%, #74ad5a 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#68a54b', endColorstr='#74ad5a',GradientType=0);
+	background-color:#68a54b;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+
+		.relative-parent {
+ 
+ }
+
+ .relative {
+    
+    height: 0px;
+    width: 1000px;
+    position: relative;
+    top: 2px;
+    left: 450px;
+ }
+
+	/* Style The Dropdown Button */
+			.dropbtn {
+ 						 background-color: #4d88ff;
+  							color: white;
+  							padding: 16px;
+  							font-size: 16px;
+  							border: none;
+  						cursor: pointer;
+					}
+
+/* The container <div> - needed to position the dropdown content */
+			.dropdown {
+  							position: center;
+  				 			display: inline-block;
+
+						}
+
+/* Dropdown Content (Hidden by Default) */
+			.dropdown-content {
+  									display: none;
+  									position: absolute;
+  									background-color: #f9f9f9;
+  									min-width: 160px;
+ 									 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.9);
+ 									 z-index: 1;
+ 									  background-color: #4d88ff;
+
+								}
+
+/* Links inside the dropdown */
+			.dropdown-content a {
+ 									 color: black;
+ 									 padding: 12px 16px;
+ 									 text-decoration: none;
+ 									 display: block;
+								}
+
+/* Change color of dropdown links on hover */
+			.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+			.dropdown:hover .dropdown-content {
+  												display: block;
+											}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+			.dropdown:hover .dropbtn {
+ 										 background-color: #87CEEB;
+										}
+
+
+
+
+			/* Style the form - display items horizontally */
+			.form-inline { 
+				display: flex;
+				flex-flow: row wrap;
+				align-items: center;
+				background-color: #F8F8F8;
+				padding: 10px;
+			}
+
+			/* Add some margins for each label */
+			.form-inline label {
+				margin: 3px 5px 5px 0;
+				font-size: 12px;
+				padding: 5px;
+			}
+
+			/* Style the input fields */
+			.form-inline input {
+				vertical-align: middle;
+				margin: 4px 10px 5px 5px;
+				padding: 10px;
+				background-color: #FFFFFF;
+				border: 1px solid #ddd;
+			}
+
+			/* Style the submit button */
+			.form-inline button {
+				padding: 10px 20px;
+				background-color: #F38890;
+				border: 1px solid #1116F0;
+				color: white;
+			}
+
+			.form-inline button:hover {
+				background-color: royalblue;
+			}
+
+			/* Add responsiveness - display the form controls vertically instead of horizontally on screens that are less than 800px wide */
+			@media (max-width: 300px) {
+			.form-inline input {
+				margin: 10px 0;
+			}
+
+			.form-inline {
+				flex-direction: column;
+				align-items: stretch;
+
+
+			}
+
+			#elemento{
+				padding: 15px;
+				margin-left: -100px;
+
+			}
+
+
+
+
+		</style>
+
+
+	
+</head>
+<body class="borda" >
+	<script src="js/jquery.min.js"></script>
+ <script src="js/bootstrap.min.js"></script>
+
+ <div id="area-cabecalho">
+
+		<div id="area-logo">
+			<!--<h2 style="color: white; font-size: 3em;">E R P</h2>-->
+			<img src="materialize/imagens/logojk.png" class="logo">
+		</div>
+
+
+
+		<div class="dropdown">
+			<button class="dropbtn">COMPRAS</button>
+			<div class="dropdown-content">
+				<a href="/cadastrarfornecedor" class="dropbtn">Cadastrar
+					Fornecedor</a> <a href="/pageCompras">Compras</a>					
+					<a href="/cotacao" class="dropbtn">Cotação</a>
+			</div>
+		</div>
+
+		<div class="dropdown">
+			<button class="dropbtn">VENDAS</button>
+			<div class="dropdown-content">
+				<a href="/cadastroCliente">Cadastro de Cliente</a> <a
+					href="/cadastroVendas">Vendas</a> <a href="/relatorioVendas">Relatório
+					de Vendas</a>
+			</div>
+		</div>
+
+		<div class="dropdown">
+			<button class="dropbtn">RECEBIMENTO</button>
+			<div class="dropdown-content">
+				<a href="/cadastroNotaFiscal">Geração Nota Fiscal</a> <a
+					href="/buscarfornecedor">Buscar fornecedor</a>
+			</div>
+		</div>
+
+		<div class="dropdown">
+			<button class="dropbtn">ESTOQUE</button>
+			<div class="dropdown-content">
+				<a href="/cadastroProduto">Cadastro de Produtos</a>
+			</div>
+		</div>
+	</div>
+
+    <br><br><br>
+    <!-- <div id="area-principal">
+        <div id="area-de-postagem"> -->
+            	
+			
+
+<div id="divBusca">
+  
+  <input type="text" id="txtBusca" placeholder="Buscar..."/>
+	
+					<a href="#" class="myButton" style="color: white;">Pesquisar</a>
+					
+			 
+</div>
+
+
+<br><br><br>
+
+
+      
+      
+        <textarea name="tx_mensagem" cols="125" rows="20" class="formbutton" id="tx_mensagem">
+        <tr th:each="fornecedor : ${fornecedores}">
+				<!-- <td><a th:href="${#mvc.url('EC#detalhesFornecedor')}"><span th:text="${fornecedor.cnpj}"></span></a></td> -->
+				<td><span th:text="${fornecedor.cnpj}"></span></td>
+				<td><span th:text="${fornecedor.razaoSocial}"></span></td>
+				<td><span th:text="${fornecedor.ddd}"></span></td>
+				<td><span th:text="${fornecedor.telefone}"></span></td>
+				<td><span th:text="${fornecedor.email}"></span></td>
+				<td><span th:text="${fornecedor.cidade}"></span></td>
+				<td><span th:text="${fornecedor.estado}"></span></td>
+				<td><a href="/cadastrarfornecedor/"> <button type="submit"  class="waves-effect waves-light btn" >Editar</button></a></td>
+				<td><button type="submit"  class="waves-effect waves-light btn">Excluir</button></td>
+			</tr> 
+        
+        
+        
+        </textarea>
+      </font></td>
+    </tr>
+    <tr>
+      <td height="85"><p><strong><font face="Verdana, Arial, Helvetica, sans-serif"><font size="1">
+      </font></font></strong></p></td>
+    </tr>
+    <tr>
+      <td height="22"></td>
+      <td>
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+
+			
+
+    
+
+
+    <div id="rodape">
+        <h6>Todos os direitos reservados</h6>
+    </div>
+
+</body>
+</html>

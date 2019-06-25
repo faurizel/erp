@@ -14,4 +14,10 @@ public class VendasController {
 		ModelAndView view = new ModelAndView("/vendas/cadastroVendas");
 		return view;
 	}
+	
+	@RequestMapping(value = "/cotacao" , method = RequestMethod.GET)
+	public ModelAndView cotacao() {			
+		ModelAndView view = new ModelAndView("/vendas/cotacao");
+		return view;
+	}
 }

@@ -1,0 +1,62 @@
+  b<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Módulo de Fornecedor</title>
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+<!--Import materialize.css-->
+<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"media="screen,projection" />
+
+<!--Let browser know website is optimized for mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+
+	
+	<h5>Buscar Notas</h5>
+	
+	<div class="row">
+    	<form class="col s12" action="/buscarNotafiscal">
+      	<div class="row">
+        	<div class="input-field col s4">
+          		<input id="cnpj" type="text" name="cnpj">
+          		<label for="cnpj">ID</label>
+        	</div>
+        	<div class="input-field col s4">
+          		<input id="razaoSocial" type="text" name="razaoSocial">
+          		<label for="razaoSocial">Nota</label>
+        	</div>
+        	<div class="input-field col s4">
+        	<button type="submit"  class="waves-effect waves-light btn">Buscar</button>
+        		<!-- <a href="/fornecedores" class="waves-effect waves-light btn">Buscar</a>   -->        		
+        	</div>
+     	</div>
+     	 </form>     
+     </div>  
+	<table class="striped">
+		<thead>
+			<tr>
+				<th>Nota Fiscal</th>
+				<th>Data Entrada</th>
+				<th>Ordem de Compra</th>
+				<th>Valor Total</th>				
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="nota : ${notas}">
+				<!-- <td><a th:href="${#mvc.url('EC#detalhesFornecedor')}"><span th:text="${fornecedor.cnpj}"></span></a></td> -->
+				<td><span th:text="${nota.nota_fiscal}"></span></td>
+				<td><span th:text="${nota.data_entrada}"></span></td>
+				<td><span th:text="${nota.ordem_compra}"></span></td>
+				<td><span th:text="${nota.valor_total}"></span></td>
+			
+				<td><a href="/cadastrarfornecedor/"> <button type="submit"  class="waves-effect waves-light btn" >Editar</button></a></td>
+				<td><button type="submit"  class="waves-effect waves-light btn">Excluir</button></td>
+			</tr>
+		</tbody>
+		
+	</table>
+	<!--JavaScript at end of body for optimized loading-->
+	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+</body>
+</html>

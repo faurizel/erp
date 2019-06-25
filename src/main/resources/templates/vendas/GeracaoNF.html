@@ -155,8 +155,9 @@
 		<div class="dropdown">
 			<button class="dropbtn">RECEBIMENTO</button>
 			<div class="dropdown-content">
-				<a href="/cadastroNotaFiscal">Geração Nota Fiscal</a> <a
-					href="/buscarfornecedor">Buscar fornecedor</a>
+				<a href="/cadastroNotaFiscal">Geração Nota Fiscal</a> 
+				<a	href="/buscarfornecedor">Buscar fornecedor</a>
+				<a href="/buscarNotas">Buscar Nota Fiscal</a>
 			</div>
 		</div>
 
@@ -174,25 +175,25 @@
 	<!-- <div id="area-principal">
         <div id="area-de-postagem"> -->
 
-	<form>
+	<form action="/adicionarNotaFiscal" >
 
 		<div id="elemento">
 
 			<section class="form-inline">
 				<label for=""><h4>Nº nota:</h4></label> <input type="text"
-					id="nota_fiscal" placeholder="nota fiscal" name="nota" size="44">
+					id="nota_fiscal" placeholder="nota fiscal" name="nota_fiscal" size="44">
 
 				<label for=""><h4>data de entrada:</h4></label> <input type="date"
-					id="data_entrada" placeholder="data de entrada" name="data"
+					id="data_entrada" placeholder="data de entrada" name="data_entrada"
 					size="29">
 			</section>
 
 			<section class="form-inline">
 				<label for=""><h4>ordem de compra:</h4></label> <input type="text"
 					id="ordem_compra" placeholder="ordem de compra"
-					name="ordem de compra" size="15"> <label for=""><h4>valor
+					name="ordem_compra" size="15"> <label for=""><h4>valor
 						total:</h4></label> <input type="text" id="SobreNome" placeholder="valor"
-					name="valor" size="30"><br>
+					name="valor_total" size="30"><br>
 				<br> <label>observações:</label><br>
 				<textarea rows="5" cols="100"></textarea>
 			</section>
