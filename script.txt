@@ -1,0 +1,58 @@
+CREATE TABLE `cliente` (
+  `id_cliente` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `nome_cliente` varchar(255) DEFAULT NULL,
+  `ddd` varchar(255) DEFAULT NULL,
+  `telefone_fornecedor` varchar(255) DEFAULT NULL,
+  `email_cliente` varchar(45) DEFAULT NULL,
+  `cep_cliente` varchar(255) DEFAULT NULL,
+  `endereco_cliente` varchar(70) DEFAULT NULL,
+  `complemento` varchar(45) DEFAULT NULL,
+  `bairro_cliente` varchar(70) DEFAULT NULL,
+  `cidade_cliente` varchar(45) DEFAULT NULL,
+  `uf_cliente` varchar(2) DEFAULT NULL,
+  `cpf_cliente` varchar(255) DEFAULT NULL,
+  `cnpj_cliente` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id_cliente`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `entrada_nf` (
+  `id_entrada_nf` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `id_codigo_produto` int(10) unsigned NOT NULL,
+  `nota_fiscal` int(10) unsigned DEFAULT NULL,
+  `data_entrada` date DEFAULT NULL,
+  `ordem_compra` int(10) unsigned DEFAULT NULL,
+  `valor_total` float DEFAULT NULL,
+  PRIMARY KEY (`id_entrada_nf`),
+  KEY `FKIndex1` (`id_codigo_produto`),
+  CONSTRAINT `entrada_nf_ibfk_1` FOREIGN KEY (`id_codigo_produto`) REFERENCES `produto` (`id_codigo_produto`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+CREATE TABLE `fornecedor` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `cnpj_fornecedor` int(10) unsigned DEFAULT NULL,
+  `razao_social` varchar(255) DEFAULT NULL,
+  `tipo` varchar(50) DEFAULT NULL,
+  `ddd` int(10) unsigned DEFAULT NULL,
+  `telefone_fornecedor` int(10) unsigned DEFAULT NULL,
+  `email_fornecedor` varchar(45) DEFAULT NULL,
+  `cep_fornecedor` int(10) unsigned DEFAULT NULL,
+  `endereco_fornecedor` varchar(70) DEFAULT NULL,
+  `numero` int(10) unsigned DEFAULT NULL,
+  `complemento` varchar(45) DEFAULT NULL,
+  `bairro_fornecedor` varchar(70) DEFAULT NULL,
+  `cidade_fornecedor` varchar(45) DEFAULT NULL,
+  `estado_fornecedor` varchar(2) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+CREATE TABLE `produto` (
+  `id_codigo_produto` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `descricao` varchar(150) DEFAULT NULL,
+  `quantidade` int(10) unsigned NOT NULL,
+  `unidade` int(10) unsigned NOT NULL,
+  `valor` float(4,2) NOT NULL,
+  PRIMARY KEY (`id_codigo_produto`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
