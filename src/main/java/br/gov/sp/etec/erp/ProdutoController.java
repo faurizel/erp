@@ -26,6 +26,7 @@ public class ProdutoController {
 	@RequestMapping(value = "/adicionarProduto" , method = RequestMethod.GET)
 	public ModelAndView adicionarProduto(Produto produto) {			
 		 repository.save(produto); 
+		 
 		ModelAndView view = new ModelAndView("/estoque/produto");
 		return view;
 	}	

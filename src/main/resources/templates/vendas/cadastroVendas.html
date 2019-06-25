@@ -1,264 +1,254 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <!--  <meta charset="UTF-8"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ERP</title>
-    <link rel="stylesheet" href="materialize/css/style.css"> 
-    
-		<style type="text/css">
+<!--  <meta charset="UTF-8"> -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>ERP</title>
+<link rel="stylesheet" href="materialize/css/style.css">
 
+<style type="text/css">
+.relative-parent {
+	
+}
 
-		.relative-parent {
- 
- }
+.relative {
+	height: 0px;
+	width: 1000px;
+	position: relative;
+	top: 2px;
+	left: 450px;
+}
 
- .relative {
-    
-    height: 0px;
-    width: 1000px;
-    position: relative;
-    top: 2px;
-    left: 450px;
- }
-
-	/* Style The Dropdown Button */
-			.dropbtn {
- 						 background-color: #4d88ff;
-  							color: white;
-  							padding: 16px;
-  							font-size: 16px;
-  							border: none;
-  						cursor: pointer;
-					}
+/* Style The Dropdown Button */
+.dropbtn {
+	background-color: #4d88ff;
+	color: white;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+}
 
 /* The container <div> - needed to position the dropdown content */
-			.dropdown {
-  							position: center;
-  				 			display: inline-block;
-
-						}
+.dropdown {
+	position: center;
+	display: inline-block;
+}
 
 /* Dropdown Content (Hidden by Default) */
-			.dropdown-content {
-  									display: none;
-  									position: absolute;
-  									background-color: #f9f9f9;
-  									min-width: 160px;
- 									 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.9);
- 									 z-index: 1;
- 									  background-color: #4d88ff;
-
-								}
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.9);
+	z-index: 1;
+	background-color: #4d88ff;
+}
 
 /* Links inside the dropdown */
-			.dropdown-content a {
- 									 color: black;
- 									 padding: 12px 16px;
- 									 text-decoration: none;
- 									 display: block;
-								}
+.dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
 
 /* Change color of dropdown links on hover */
-			.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {
+	background-color: #f1f1f1
+}
 
 /* Show the dropdown menu on hover */
-			.dropdown:hover .dropdown-content {
-  												display: block;
-											}
+.dropdown:hover .dropdown-content {
+	display: block;
+}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-			.dropdown:hover .dropbtn {
- 										 background-color: #87CEEB;
-										}
+.dropdown:hover .dropbtn {
+	background-color: #87CEEB;
+}
 
+/* Style the form - display items horizontally */
+.form-inline {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	background-color: #F8F8F8;
+	padding: 10px;
+}
 
+/* Add some margins for each label */
+.form-inline label {
+	margin: 3px 5px 5px 0;
+	font-size: 12px;
+	padding: 5px;
+}
 
+/* Style the input fields */
+.form-inline input {
+	vertical-align: middle;
+	margin: 4px 10px 5px 5px;
+	padding: 10px;
+	background-color: #FFFFFF;
+	border: 1px solid #ddd;
+}
 
-			/* Style the form - display items horizontally */
-			.form-inline { 
-				display: flex;
-				flex-flow: row wrap;
-				align-items: center;
-				background-color: #F8F8F8;
-				padding: 10px;
-			}
+/* Style the submit button */
+.form-inline button {
+	padding: 10px 20px;
+	background-color: #F38890;
+	border: 1px solid #1116F0;
+	color: white;
+}
 
-			/* Add some margins for each label */
-			.form-inline label {
-				margin: 3px 5px 5px 0;
-				font-size: 12px;
-				padding: 5px;
-			}
+.form-inline button:hover {
+	background-color: royalblue;
+}
 
-			/* Style the input fields */
-			.form-inline input {
-				vertical-align: middle;
-				margin: 4px 10px 5px 5px;
-				padding: 10px;
-				background-color: #FFFFFF;
-				border: 1px solid #ddd;
-			}
+/* Add responsiveness - display the form controls vertically instead of horizontally on screens that are less than 800px wide */
+@media ( max-width : 300px) {
+	.form-inline input {
+		margin: 10px 0;
+	}
+	.form-inline {
+		flex-direction: column;
+		align-items: stretch;
+	}
+	#elemento {
+		padding: 15px;
+		margin-left: -100px;
+	}
+}
+</style>
 
-			/* Style the submit button */
-			.form-inline button {
-				padding: 10px 20px;
-				background-color: #F38890;
-				border: 1px solid #1116F0;
-				color: white;
-			}
-
-			.form-inline button:hover {
-				background-color: royalblue;
-			}
-
-			/* Add responsiveness - display the form controls vertically instead of horizontally on screens that are less than 800px wide */
-			@media (max-width: 300px) {
-			.form-inline input {
-				margin: 10px 0;
-			}
-
-			.form-inline {
-				flex-direction: column;
-				align-items: stretch;
-
-
-			}
-
-			#elemento{
-				padding: 15px;
-				margin-left: -100px;
-
-			}
-
-
-		</style>
-	
 </head>
-<body class="borda" >
+<body class="borda">
 
-    <div id="area-cabecalho">
+	<div id="area-cabecalho">
 
-        <div id="area-logo">
-           <!--<h2 style="color: white; font-size: 3em;">E R P</h2>-->
-            <img src="materialize/imagens/logojk.png" class="logo">
-        </div>
+		<div id="area-logo">
+			<!--<h2 style="color: white; font-size: 3em;">E R P</h2>-->
+			<img src="materialize/imagens/logojk.png" class="logo">
+		</div>
 
-      
 
-    <div class="dropdown">
-				  <button class="dropbtn">COMPRAS</button>
-				  <div class="dropdown-content">
-				    <a href="#">Link 1</a>
-				    <a href="#">Link 2</a>
-				    <a href="#">Link 3</a>
-				  </div>
-				</div>
 
-				<div class="dropdown">
-				  <button class="dropbtn">VENDAS</button>
-				  <div class="dropdown-content">
-					 <a href="/cadastroCliente">Cadastro de Cliente</a>
-				    <a href="/cadastroNotaFiscal">Geração Nota Fiscal</a>
-				    <a href="/cadastroVendas">Vendas</a>
-				    <a href="/relatorioVendas">Relatório de Vendas</a>		
-				  </div> 
-				</div>
+		<div class="dropdown">
+			<button class="dropbtn">COMPRAS</button>
+			<div class="dropdown-content">
+				<a href="/cadastrarfornecedor" class="dropbtn">Cadastrar
+					Fornecedor</a> <a href="/pageCompras">Compras</a>
+			</div>
+		</div>
 
-				<div class="dropdown">
-				  <button class="dropbtn">RECEBIMENTO</button>
-				  <div class="dropdown-content">
-				    <a href="#">Link 1</a>
-				    <a href="#">Link 2</a>
-				    <a href="#">Link 3</a>
-				  </div>
-				</div>
+		<div class="dropdown">
+			<button class="dropbtn">VENDAS</button>
+			<div class="dropdown-content">
+				<a href="/cadastroCliente">Cadastro de Cliente</a> <a
+					href="/cadastroVendas">Vendas</a> <a href="/relatorioVendas">Relatório
+					de Vendas</a>
+			</div>
+		</div>
 
-				<div class="dropdown">
-				  <button class="dropbtn">ESTOQUE</button>
-				  <div class="dropdown-content">
-				     <a href="/cadastroProduto">Cadastro de Produtos</a>
-				    <a href="#">Link 2</a>
-				    <a href="#">Link 3</a>
-				  </div>
-				</div>
+		<div class="dropdown">
+			<button class="dropbtn">RECEBIMENTO</button>
+			<div class="dropdown-content">
+				<a href="/cadastroNotaFiscal">Geração Nota Fiscal</a> <a
+					href="/buscarfornecedor">Buscar fornecedor</a>
+			</div>
+		</div>
 
-				</div>
-
-    <br><br><br>
-    <!-- <div id="area-principal">
+		<div class="dropdown">
+			<button class="dropbtn">ESTOQUE</button>
+			<div class="dropdown-content">
+				<a href="/cadastroProduto">Cadastro de Produtos</a>
+			</div>
+		</div>
+	</div>
+	
+	<br>
+	<br>
+	<br>
+	<!-- <div id="area-principal">
         <div id="area-de-postagem"> -->
-            	
-			<form>
 
-				<div  id="elemento">
-					
-						<section class="form-inline">
-							<label for="Vendas"><h4>Pedido de Vendas</h4></label>
-							<input type="number" id="Venda" placeholder="Entre Vendas" name="Vendas" size="20">
-			  
-							<label for="GeracaoNF"><h4>Numero da nota fiscal:</h4></label>
-							<input type="number" id="GeracaoNF" placeholder="Nota Fiscal" name="GeracaoNF" size="20">
-			  			</section>
+	<form>
 
-			  			<section class="form-inline">
-							<label for="CadastroCliente"><h4>Cadastro do Cliente:</h4></label>
-							<input type="text" id="CadastroCliente" placeholder="Enter Cadastro do Cliente" name="CadastroCliente" size="100">
-                        </section>
+		<div id="elemento">
 
-                        <section class="form-inline">
-							<label for="Relatorios"><h4>Relatórios:</h4></label>
-							<textarea style="width:600px; height:400px;" type="text" id="Relatorio" placeholder="Enter Relatorio" name="Relatorio" size="500"></textarea>
-							
-			  			</section>
+			<section class="form-inline">
+				<label for="Vendas"><h4>Pedido de Vendas</h4></label> <input
+					type="number" id="Venda" placeholder="Entre Vendas" name="Vendas"
+					size="20"> <label for="GeracaoNF"><h4>Numero
+						da nota fiscal:</h4></label> <input type="number" id="GeracaoNF"
+					placeholder="Nota Fiscal" name="GeracaoNF" size="20">
+			</section>
 
-			  			<section class="form-inline">
-							<label for="NumeroPedido"><h4>Numero do Pedido:</h4></label>
-							<input type="number" id="NumeroPedido" placeholder="Entre Pedido" name="NumeroPedido" size="20">
-			  				
-			  				<label for="CodProduto"><h4> Codigo do produto:</h4></label>
-							<input type="number" id="CodProduto" placeholder="Entre Codigo do Produto" name="CodProduto" size="4">
-			  			</section>
+			<section class="form-inline">
+				<label for="CadastroCliente"><h4>Cadastro do Cliente:</h4></label> <input
+					type="text" id="CadastroCliente"
+					placeholder="Enter Cadastro do Cliente" name="CadastroCliente"
+					size="100">
+			</section>
 
-			  			<section class="form-inline">
-							<label for="DataPedido"><h4>Data do Pedido:</h4></label>
-							<input type="date" id="DataPedido" placeholder="Enter Data do Pedido" name="DataPedido">
+			<section class="form-inline">
+				<label for="Relatorios"><h4>Relatórios:</h4></label>
+				<textarea style="width: 600px; height: 400px;" type="text"
+					id="Relatorio" placeholder="Enter Relatorio" name="Relatorio"
+					size="500"></textarea>
 
-							<label for="CNPJ"><h4>CNPJ:</h4></label>
-							<input type="text" id="CPNJ" placeholder="Enter CPNJ" name="CNPJ" size="14">
-			  			</section>
+			</section>
 
-			  			<section class="form-inline">
-							<label for="DescricaoProduto"><h4>Descrição do Produto:</h4></label>
-							<input type="text" id="DescricaoProduto" placeholder="Entre Descrição" name="DescricaoProduto" size="80">
-			  			</section>
+			<section class="form-inline">
+				<label for="NumeroPedido"><h4>Numero do Pedido:</h4></label> <input
+					type="number" id="NumeroPedido" placeholder="Entre Pedido"
+					name="NumeroPedido" size="20"> <label for="CodProduto"><h4>
+						Codigo do produto:</h4></label> <input type="number" id="CodProduto"
+					placeholder="Entre Codigo do Produto" name="CodProduto" size="4">
+			</section>
 
-			  			<section class="form-inline">
-							<label for="QuantidadeProduto"><h4>Quantidade de Produtos:</h4></label>
-							<input type="number" id="QuantidadeProduto" placeholder="Enter Quantidade de Produtos" name="QuantidadeProduto" size="4,2">
-			  
-							<label for="Unidade"><h4>Unidade :</h4></label>
-							<input type="text" id="Unidade" placeholder="Enter Unidade" name="Unidade" size="3">
+			<section class="form-inline">
+				<label for="DataPedido"><h4>Data do Pedido:</h4></label> <input
+					type="date" id="DataPedido" placeholder="Enter Data do Pedido"
+					name="DataPedido"> <label for="CNPJ"><h4>CNPJ:</h4></label>
+				<input type="text" id="CPNJ" placeholder="Enter CPNJ" name="CNPJ"
+					size="14">
+			</section>
 
-							<label for="Valor"><h4>Valor:</h4></label>
-							<input type="number" id="Valor" placeholder="Enter Valor" name="Valor" size="4,2">
-			  			</section>
-			  
-			  			<br><br>
-						<button type="submit">Salvar</button>
-						<button type="submit">Excluir</button>
+			<section class="form-inline">
+				<label for="DescricaoProduto"><h4>Descrição do Produto:</h4></label>
+				<input type="text" id="DescricaoProduto"
+					placeholder="Entre Descrição" name="DescricaoProduto" size="80">
+			</section>
+
+			<section class="form-inline">
+				<label for="QuantidadeProduto"><h4>Quantidade de
+						Produtos:</h4></label> <input type="number" id="QuantidadeProduto"
+					placeholder="Enter Quantidade de Produtos" name="QuantidadeProduto"
+					size="4,2"> <label for="Unidade"><h4>Unidade :</h4></label>
+				<input type="text" id="Unidade" placeholder="Enter Unidade"
+					name="Unidade" size="3"> <label for="Valor"><h4>Valor:</h4></label>
+				<input type="number" id="Valor" placeholder="Enter Valor"
+					name="Valor" size="4,2">
+			</section>
+
+			<br>
+			<br>
+			<button type="submit">Salvar</button>
+			<button type="submit">Excluir</button>
 
 
 
 
-				</div>
- 
-			</form> 
+		</div>
 
-    <div id="rodape">
-        <h6>Todos os direitos reservados</h6>
-    </div>
+	</form>
+
+	<div id="rodape">
+		<h6>Todos os direitos reservados</h6>
+	</div>
 
 </body>
 </html>

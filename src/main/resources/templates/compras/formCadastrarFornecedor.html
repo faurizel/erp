@@ -25,47 +25,45 @@
 
 	  <div id="area-cabecalho">
 
-        <div id="area-logo">
-           <!--<h2 style="color: white; font-size: 3em;">E R P</h2>-->
-            <img src="imagens/logojk.png" class="logo">
-      
-	      </div>
-	 
-
-          
-	       <nav style="background-color: #4d88ff;padding: 10px;">
+		<div id="area-logo">
+			<!--<h2 style="color: white; font-size: 3em;">E R P</h2>-->
+			<img src="materialize/imagens/logojk.png" class="logo">
+		</div>
 
 
-               <div class="dropdown">
-				   <a href="/cadastrarfornecedor" class="dropbtn">Cadastrar Fornecedor</a>
-				    <div class="dropdown-content">
-				      <a href="/pagecompras">Compras</a>
-				   </div>    
-				</div>		       
-<!--  
-				 <div class="dropdown" >
-				  <a id="recebi" class="dropbtn">Recebimento</a>
-				    <div class="dropdown-content">
-				      <a href="">Cotações</a>
-				   </div>    
 
-				</div>		   
-				 <div class="dropdown" >
-				  <a class="dropbtn">Estoque</a>
-				    <div class="dropdown-content">
-				      <a href="">Cotações</a>
-				   </div>    
-				</div>		   
-				 <div class="dropdown" >
-				  <a class="dropbtn">Vendas</a>
-				    <div class="dropdown-content">
-				      <a href="">Cotações</a>
-				   </div>    
-				</div>
--->
-           </nav>
+		<div class="dropdown">
+			<button class="dropbtn">COMPRAS</button>
+			<div class="dropdown-content">
+				<a href="/cadastrarfornecedor" class="dropbtn">Cadastrar
+					Fornecedor</a> <a href="/pageCompras">Compras</a>
+			</div>
+		</div>
 
-       </div>
+		<div class="dropdown">
+			<button class="dropbtn">VENDAS</button>
+			<div class="dropdown-content">
+				<a href="/cadastroCliente">Cadastro de Cliente</a> <a
+					href="/cadastroVendas">Vendas</a> <a href="/relatorioVendas">Relatório
+					de Vendas</a>
+			</div>
+		</div>
+
+		<div class="dropdown">
+			<button class="dropbtn">RECEBIMENTO</button>
+			<div class="dropdown-content">
+				<a href="/cadastroNotaFiscal">Geração Nota Fiscal</a> <a
+					href="/buscarfornecedor">Buscar fornecedor</a>
+			</div>
+		</div>
+
+		<div class="dropdown">
+			<button class="dropbtn">ESTOQUE</button>
+			<div class="dropdown-content">
+				<a href="/cadastroProduto">Cadastro de Produtos</a>
+			</div>
+		</div>
+	</div>
     <form class="container" method="POST">    
         <table>
 

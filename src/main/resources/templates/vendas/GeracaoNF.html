@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!--  <meta charset="UTF-8"> -->
+<!--  <meta charset="UTF-8"> -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>ERP</title>
@@ -124,9 +124,9 @@
 </style>
 
 </head>
-<body class="borda" >
+<body class="borda">
 
-   <div id="area-cabecalho">
+	<div id="area-cabecalho">
 
 		<div id="area-logo">
 			<!--<h2 style="color: white; font-size: 3em;">E R P</h2>-->
@@ -138,7 +138,8 @@
 		<div class="dropdown">
 			<button class="dropbtn">COMPRAS</button>
 			<div class="dropdown-content">
-				<a href="#">Link 1</a> <a href="#">Link 2</a> <a href="#">Link 3</a>
+				<a href="/cadastrarfornecedor" class="dropbtn">Cadastrar
+					Fornecedor</a> <a href="/pageCompras">Compras</a>
 			</div>
 		</div>
 
@@ -146,79 +147,79 @@
 			<button class="dropbtn">VENDAS</button>
 			<div class="dropdown-content">
 				<a href="/cadastroCliente">Cadastro de Cliente</a> <a
-					href="/cadastroNotaFiscal">Geração Nota Fiscal</a> <a
-					href="/cadastroVendas">Vendas</a>
-					<a href="/relatorioVendas">Relatório de Vendas</a>	
+					href="/cadastroVendas">Vendas</a> <a href="/relatorioVendas">Relatório
+					de Vendas</a>
 			</div>
 		</div>
 
 		<div class="dropdown">
 			<button class="dropbtn">RECEBIMENTO</button>
 			<div class="dropdown-content">
-				<a href="#">Link 1</a> <a href="#">Link 2</a> <a href="#">Link 3</a>
+				<a href="/cadastroNotaFiscal">Geração Nota Fiscal</a> <a
+					href="/buscarfornecedor">Buscar fornecedor</a>
 			</div>
 		</div>
 
 		<div class="dropdown">
 			<button class="dropbtn">ESTOQUE</button>
 			<div class="dropdown-content">
-				  <a href="/cadastroProduto">Cadastro de Produtos</a>
-				  <a href="#">Link 2</a> 
-				  <a href="#">Link 3</a>
+				<a href="/cadastroProduto">Cadastro de Produtos</a>
 			</div>
 		</div>
 	</div>
 
-    <br><br><br>
-    <!-- <div id="area-principal">
+	<br>
+	<br>
+	<br>
+	<!-- <div id="area-principal">
         <div id="area-de-postagem"> -->
-            	
-			<form>
 
-				<div  id="elemento">
-					
-						<section class="form-inline">
-							<label for=""><h4>Nº nota:</h4></label>
-							<input type="text" id="nota_fiscal" placeholder="nota fiscal" name="nota" size="44">
-			  
-							<label for=""><h4> data de entrada:</h4></label>
-							<input type="date" id="data_entrada" placeholder="data de entrada" name="data" size="29">
-			  			</section>
+	<form>
 
-			  			<section class="form-inline">
-							<label for=""><h4>ordem de compra:</h4></label>
-							<input type="text" id="ordem_compra" placeholder="ordem de compra" name="ordem de compra" size="15">
-			  
-							<label for=""><h4>valor total:</h4></label>
-							<input type="text" id="SobreNome" placeholder="valor" name="valor" size="30"><br><br>
+		<div id="elemento">
 
-							<label>observações:</label><br>
-							<textarea rows="5" cols="100"></textarea>
-			  			</section>
+			<section class="form-inline">
+				<label for=""><h4>Nº nota:</h4></label> <input type="text"
+					id="nota_fiscal" placeholder="nota fiscal" name="nota" size="44">
+
+				<label for=""><h4>data de entrada:</h4></label> <input type="date"
+					id="data_entrada" placeholder="data de entrada" name="data"
+					size="29">
+			</section>
+
+			<section class="form-inline">
+				<label for=""><h4>ordem de compra:</h4></label> <input type="text"
+					id="ordem_compra" placeholder="ordem de compra"
+					name="ordem de compra" size="15"> <label for=""><h4>valor
+						total:</h4></label> <input type="text" id="SobreNome" placeholder="valor"
+					name="valor" size="30"><br>
+				<br> <label>observações:</label><br>
+				<textarea rows="5" cols="100"></textarea>
+			</section>
 
 
-			  
-			  			<br>
-						
-						<button  type="submit">excluir</button>
-						<button type="submit" class="btn btn-outline-primary">salvar</button>
 
-				</div>
- 
-			</form> 
-						
+			<br>
 
-			
+			<button type="submit">excluir</button>
+			<button type="submit" class="btn btn-outline-primary">salvar</button>
 
-    <!--           
+		</div>
+
+	</form>
+
+
+
+
+	<!--           
         </div>
     </div>-->
-    
 
 
-    <div id="rodape">
-        <h6>Todos os direitos reservados</h6>
-    </div>
+
+	<div id="rodape">
+		<h6>Todos os direitos reservados</h6>
+	</div>
 
 </body>
 </html>

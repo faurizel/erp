@@ -1,258 +1,241 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <!--  <meta charset="UTF-8"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ERP</title>
-    <link rel="stylesheet" href="materialize/css/style.css"> 
-    
-		<style type="text/css">
+<!--  <meta charset="UTF-8"> -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>ERP</title>
+<link rel="stylesheet" href="materialize/css/style.css">
 
+<style type="text/css">
+.relative-parent {
+	
+}
 
-		.relative-parent {
- 
- }
+.relative {
+	height: 0px;
+	width: 1000px;
+	position: relative;
+	top: 2px;
+	left: 450px;
+}
 
- .relative {
-    
-    height: 0px;
-    width: 1000px;
-    position: relative;
-    top: 2px;
-    left: 450px;
- }
-
-	/* Style The Dropdown Button */
-			.dropbtn {
- 						 background-color: #4d88ff;
-  							color: white;
-  							padding: 16px;
-  							font-size: 16px;
-  							border: none;
-  						cursor: pointer;
-					}
+/* Style The Dropdown Button */
+.dropbtn {
+	background-color: #4d88ff;
+	color: white;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+}
 
 /* The container <div> - needed to position the dropdown content */
-			.dropdown {
-  							position: center;
-  				 			display: inline-block;
-
-						}
+.dropdown {
+	position: center;
+	display: inline-block;
+}
 
 /* Dropdown Content (Hidden by Default) */
-			.dropdown-content {
-  									display: none;
-  									position: absolute;
-  									background-color: #f9f9f9;
-  									min-width: 160px;
- 									 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.9);
- 									 z-index: 1;
- 									  background-color: #4d88ff;
-
-								}
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.9);
+	z-index: 1;
+	background-color: #4d88ff;
+}
 
 /* Links inside the dropdown */
-			.dropdown-content a {
- 									 color: black;
- 									 padding: 12px 16px;
- 									 text-decoration: none;
- 									 display: block;
-								}
+.dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
 
 /* Change color of dropdown links on hover */
-			.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {
+	background-color: #f1f1f1
+}
 
 /* Show the dropdown menu on hover */
-			.dropdown:hover .dropdown-content {
-  												display: block;
-											}
+.dropdown:hover .dropdown-content {
+	display: block;
+}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-			.dropdown:hover .dropbtn {
- 										 background-color: #87CEEB;
-										}
+.dropdown:hover .dropbtn {
+	background-color: #87CEEB;
+}
 
+/* Style the form - display items horizontally */
+.form-inline {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	background-color: #F8F8F8;
+	padding: 10px;
+}
 
+/* Add some margins for each label */
+.form-inline label {
+	margin: 3px 5px 5px 0;
+	font-size: 12px;
+	padding: 5px;
+}
 
+/* Style the input fields */
+.form-inline input {
+	vertical-align: middle;
+	margin: 4px 10px 5px 5px;
+	padding: 10px;
+	background-color: #FFFFFF;
+	border: 1px solid #ddd;
+}
 
-			/* Style the form - display items horizontally */
-			.form-inline { 
-				display: flex;
-				flex-flow: row wrap;
-				align-items: center;
-				background-color: #F8F8F8;
-				padding: 10px;
-			}
+/* Style the submit button */
+.form-inline button {
+	padding: 10px 20px;
+	background-color: #F38890;
+	border: 1px solid #1116F0;
+	color: white;
+}
 
-			/* Add some margins for each label */
-			.form-inline label {
-				margin: 3px 5px 5px 0;
-				font-size: 12px;
-				padding: 5px;
-			}
+.form-inline button:hover {
+	background-color: royalblue;
+}
 
-			/* Style the input fields */
-			.form-inline input {
-				vertical-align: middle;
-				margin: 4px 10px 5px 5px;
-				padding: 10px;
-				background-color: #FFFFFF;
-				border: 1px solid #ddd;
-			}
+/* Add responsiveness - display the form controls vertically instead of horizontally on screens that are less than 800px wide */
+@media ( max-width : 300px) {
+	.form-inline input {
+		margin: 10px 0;
+	}
+	.form-inline {
+		flex-direction: column;
+		align-items: stretch;
+	}
+	#elemento {
+		padding: 15px;
+		margin-left: -100px;
+	}
+}
+</style>
 
-			/* Style the submit button */
-			.form-inline button {
-				padding: 10px 20px;
-				background-color: #F38890;
-				border: 1px solid #1116F0;
-				color: white;
-			}
-
-			.form-inline button:hover {
-				background-color: royalblue;
-			}
-
-			/* Add responsiveness - display the form controls vertically instead of horizontally on screens that are less than 800px wide */
-			@media (max-width: 300px) {
-			.form-inline input {
-				margin: 10px 0;
-			}
-
-			.form-inline {
-				flex-direction: column;
-				align-items: stretch;
-
-
-			}
-
-			#elemento{
-				padding: 15px;
-				margin-left: -100px;
-
-			}
-
-
-		</style>
-	
 </head>
-<body class="borda" >
+<body class="borda">
 
-    <div id="area-cabecalho">
+	<div id="area-cabecalho">
 
-        <div id="area-logo">
-           <!--<h2 style="color: white; font-size: 3em;">E R P</h2>-->
-            <img src="materialize/imagens/logojk.png" class="logo">
-        </div>
+		<div id="area-logo">
+			<!--<h2 style="color: white; font-size: 3em;">E R P</h2>-->
+			<img src="materialize/imagens/logojk.png" class="logo">
+		</div>
 
-      
 
-    <div class="dropdown">
-				  <button class="dropbtn">COMPRAS</button>
-				  <div class="dropdown-content">
-				    <a href="#">Link 1</a>
-				    <a href="#">Link 2</a>
-				    <a href="#">Link 3</a>
-				  </div>
-				</div>
 
-				<div class="dropdown">
-				  <button class="dropbtn">VENDAS</button>
-				  <div class="dropdown-content">
-					 <a href="/cadastroCliente">Cadastro de Cliente</a>
-				    <a href="/cadastroNotaFiscal">Geração Nota Fiscal</a>
-				    <a href="/cadastroVendas">Vendas</a>	
-				    <a href="/relatorioVendas">Relatório de Vendas</a>	
-				  </div> 
-				</div>
+		<div class="dropdown">
+			<button class="dropbtn">COMPRAS</button>
+			<div class="dropdown-content">
+				<a href="/cadastrarfornecedor" class="dropbtn">Cadastrar
+					Fornecedor</a> <a href="/pageCompras">Compras</a>
+			</div>
+		</div>
 
-				<div class="dropdown">
-				  <button class="dropbtn">RECEBIMENTO</button>
-				  <div class="dropdown-content">
-				    <a href="#">Link 1</a>
-				    <a href="#">Link 2</a>
-				    <a href="#">Link 3</a>
-				  </div>
-				</div>
+		<div class="dropdown">
+			<button class="dropbtn">VENDAS</button>
+			<div class="dropdown-content">
+				<a href="/cadastroCliente">Cadastro de Cliente</a> <a
+					href="/cadastroVendas">Vendas</a> <a href="/relatorioVendas">Relatório
+					de Vendas</a>
+			</div>
+		</div>
 
-				<div class="dropdown">
-				  <button class="dropbtn">ESTOQUE</button>
-				  <div class="dropdown-content">
-				     <a href="/cadastroProduto">Cadastro de Produtos</a>
-				    <a href="#">Link 2</a>
-				    <a href="#">Link 3</a>
-				  </div>
-				</div>
+		<div class="dropdown">
+			<button class="dropbtn">RECEBIMENTO</button>
+			<div class="dropdown-content">
+				<a href="/cadastroNotaFiscal">Geração Nota Fiscal</a> <a
+					href="/buscarfornecedor">Buscar fornecedor</a>
+			</div>
+		</div>
 
-				</div>
-</div>
+		<div class="dropdown">
+			<button class="dropbtn">ESTOQUE</button>
+			<div class="dropdown-content">
+				<a href="/cadastroProduto">Cadastro de Produtos</a>
+			</div>
+		</div>
+	</div>
 
-    <br><br><br>
-    <!-- <div id="area-principal">
+	<br>
+	<br>
+	<br>
+	<!-- <div id="area-principal">
         <div id="area-de-postagem"> -->
-            	
-			<form action="/adicionar" method="post">
 
-				<div  id="elemento">
-					
-						<section class="form-inline">
-							<label for="IdCliente"><h4>Numero do cliente</h4></label>
-							<input type="number" id="IdCliente" placeholder="Enter Cliente" name="idcliente" disabled>
-			  
-			  			</section>
+	<form action="/adicionar" method="post">
 
-			  			<section class="form-inline">
-							<label for="NomeCliente"><h4>Nome do cliente</h4></label>
-							<input type="text" id="NomeCliente" placeholder="Enter Nome do Cliente" name="razaosocial">
-			  			</section>
+		<div id="elemento">
 
-			  			<section class="form-inline">
-							<label for="CNPJ"><h4>CNPJ:</h4></label>
-							<input type="text" id="CPNJ" placeholder="Enter CPNJ" name="cnpj" size="14">
+			<section class="form-inline">
+				<label for="IdCliente"><h4>Numero do cliente</h4></label> <input
+					type="number" id="IdCliente" placeholder="Enter Cliente"
+					name="idcliente" disabled>
 
-							<label for="cpf"><h4>CPF:</h4></label>
-							<input type="number" id="cpf" placeholder="Enter cpf" name="cpf" size="14">
-			  			</section>
-						
-						<section class="form-inline">
-							<label for="Telefone"><h4>Telefone</h4></label>
-							<input type="text" id="Telefone" placeholder="Enter Telefone" name="telcliente" size="14">
-			  			</section>
+			</section>
 
-			  			<section class="form-inline">
-							<label for="cep"><h4>CEP</h4></label>
-							<input type="number" id="cep" placeholder="Enter cep" name="cep" size="8">
+			<section class="form-inline">
+				<label for="NomeCliente"><h4>Nome do cliente</h4></label> <input
+					type="text" id="NomeCliente" placeholder="Enter Nome do Cliente"
+					name="razaosocial">
+			</section>
 
-							<label for="rua"><h4>Rua</h4></label>
-							<input type="text" id="rua" placeholder="Enter rua" name="rua" size="20">
-							
-							<label for="estado"><h4>UF</h4></label>
-							<input type="text" id="estado" placeholder="Enter estado" name="estado" size="2">
-			  			
-							<label for="cidade"><h4>Cidade</h4></label>
-							<input type="text" id="cidade" placeholder="Enter cidade" name="cidade" size="20">
+			<section class="form-inline">
+				<label for="CNPJ"><h4>CNPJ:</h4></label> <input type="text"
+					id="CPNJ" placeholder="Enter CPNJ" name="cnpj" size="14"> <label
+					for="cpf"><h4>CPF:</h4></label> <input type="number" id="cpf"
+					placeholder="Enter cpf" name="cpf" size="14">
+			</section>
 
-			  			</section>
-			  
-			  			<br><br>
-						<button type="submit">Salvar</button>
-						<button type="submit">Excluir</button>
+			<section class="form-inline">
+				<label for="Telefone"><h4>Telefone</h4></label> <input type="text"
+					id="Telefone" placeholder="Enter Telefone" name="telcliente"
+					size="14">
+			</section>
 
-				</div>
- 
-			</form> 
+			<section class="form-inline">
+				<label for="cep"><h4>CEP</h4></label> <input type="number" id="cep"
+					placeholder="Enter cep" name="cep" size="8"> <label
+					for="rua"><h4>Rua</h4></label> <input type="text" id="rua"
+					placeholder="Enter rua" name="rua" size="20"> <label
+					for="estado"><h4>UF</h4></label> <input type="text" id="estado"
+					placeholder="Enter estado" name="estado" size="2"> <label
+					for="cidade"><h4>Cidade</h4></label> <input type="text" id="cidade"
+					placeholder="Enter cidade" name="cidade" size="20">
 
-			
+			</section>
 
-    <!--           
+			<br>
+			<br>
+			<button type="submit">Salvar</button>
+			<button type="submit">Excluir</button>
+
+		</div>
+
+	</form>
+
+
+
+	<!--           
         </div>
     </div>-->
-    
 
 
-    <div id="rodape">
-        <h6>Todos os direitos reservados</h6>
-    </div>
+
+	<div id="rodape">
+		<h6>Todos os direitos reservados</h6>
+	</div>
 
 </body>
 </html>

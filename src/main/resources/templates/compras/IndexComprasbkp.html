@@ -37,10 +37,11 @@ background-color:white;
  border: 1px solid #008CBA;
  color: blue;
  }
- </style>
- 
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+</style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>
+         
         function buscarFornecedor(){
 			var cnpj = document.getElementById("cnpj").value;                
             $.ajax({
@@ -50,10 +51,8 @@ background-color:white;
             	success: function(data){
             		var fornecedor = data;                		
             		console.log(fornecedor); 
-            		$('#id').val(fornecedor.id); 
-            		 $('#razaosocial').val(fornecedor.razaoSocial); 
-            		 $('#cnpjcliente').val(fornecedor.cnpj); 
-            	}})};      	
+            		$('#id').val(fornecedor.id);                		
+            	}})};           	
                 	
         </script>
 
@@ -77,28 +76,6 @@ background-color:white;
 					<a href="cadastrarfornecedor">Cadastrar Fornecedor</a>
 				</div>
 			</div>
-       <!--
-			<div class="dropdown">
-				<a id="recebi" class="dropbtn">Recebimento</a>
-				<div class="dropdown-content">
-					<a href="">Cotações</a>
-				</div>
-
-			</div>
-			   <div class="dropdown">
-				  <a class="dropbtn">Estoque</a>
-				<div class="dropdown-content">
-					<a href="">Cotações</a>
-				</div>
-			</div>
-			<div class="dropdown">
-				<a class="dropbtn">Vendas</a>
-				<div class="dropdown-content">
-					<a href="">Cotações</a>
-				</div>
-			</div>
-    -->
-
 		</nav>
 
 	</div>
@@ -111,7 +88,7 @@ background-color:white;
 			name="dataRequisicao" class="data">
 	</nav>
 
-	<form action="/fornecedores">
+	<form>
 
 		<table>
 			<tr>
@@ -121,21 +98,15 @@ background-color:white;
 			</tr>
 
 			<tr>
-				<td><input style="" type="" placeholder="Digite Aqui"
-					name="cnpj" id="cnpj"size="40"></td>
+				<td><input style="" type="text" placeholder="Digite Aqui" name="cnpj" id="cnpj" size="40" ></td>
 
-				<td><input type="text" id="id" placeholder="Digite Aqui"
-					name="id" size="40"></td>
+				<td><input type="text" laceholder="Digite Aqui" name="id" id="id"size="40"></td>
 
 
-
-				<td><button style="float: right; margin: 2px 2px 2px 2px;"
-						type="button" id="butClear" onclick="buscarFornecedor();">Selecionar</button>
-					       <button style="float: right; margin: 2px 2px 2px 2px;"
-						 id="butClear" type="reset" >Limpar</button>
-					
-
-			</tr>
+				<td><button style="float: right; margin: 2px 2px 2px 2px;" id="butClear" type="button" onclick="buscarFornecedor();" >Selecionar</button></td>
+				<td><button style="float: right; margin: 2px 2px 2px 2px;" id="butClear" type="reset" >Limpar</button></td>
+				
+				</tr>
 
 
 
@@ -144,18 +115,26 @@ background-color:white;
 
 	</form>
 	
-<form action="/fornecedores">
+<form>
 
   
 	
 	       <div class="dropdown" id="mousehover">
-				<tr id="fornecedor">Fornecedores</tr>
+				<tr id="testeDadoAqui">
+				</tr>
 			 <div class="dropdown-content">
-			   <tr th:each="f : ${fornecedores}">	
-			   
-			   <div id="razaosocial"></div>  <div id="cnpjcliente"></div> 		
-				<a href="" ><span th:text="'Razão Social: '+${f.razaoSocial}+ '|| CNPJ: ' + ${f.cnpj}"> </span> </a>
-			   <tr>
+			  <tr th:each="fornecedor : ${fornecedores}">
+				<!-- <td><a th:href="${#mvc.url('EC#detalhesFornecedor')}"><span th:text="${fornecedor.cnpj}"></span></a></td> -->
+				<td><span id="cnpj_cliente"></span></td>
+				<td><span th:text="${fornecedor.razaoSocial}"></span></td>
+				<td><span th:text="${fornecedor.ddd}"></span></td>
+				<td><span th:text="${fornecedor.telefone}"></span></td>
+				<td><span th:text="${fornecedor.email}"></span></td>
+				<td><span th:text="${fornecedor.cidade}"></span></td>
+				<td><span th:text="${fornecedor.estado}"></span></td>
+				<td><a href="/cadastrarfornecedor/"> <button type="submit"  class="waves-effect waves-light btn" >Editar</button></a></td>
+				<td><button type="submit"  class="waves-effect waves-light btn">Excluir</button></td>
+			</tr>
 			</div>
 		</div>
 </form>
